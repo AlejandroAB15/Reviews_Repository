@@ -24,7 +24,7 @@ const MongoStore = require("connect-mongo");
 
 
 const APP = express();
-const PORT = 3000; 
+const PORT = process.env.PORT || 3000; 
 
 /* ----------------Conexion a la base de datos---------------------*/
 
