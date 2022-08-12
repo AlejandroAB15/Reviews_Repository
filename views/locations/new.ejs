@@ -1,0 +1,73 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="row">
+    <h1 class="text-center">New Location</h1>
+    <div class="col-md-6 offset-md-3">
+        <form action="/locations" method="POST" novalidate class="validatedForm" enctype="multipart/form-data">
+            
+            <div class="mb-3">
+                <label class="form-label" for="title">Title:</label>
+                <input class="form-control" type="text" id="title" name = "location[title]" aria-describedby="validationServerTitleFeedback" required>
+                <div class="valid-feedback">
+                    Looks good! &#128076;
+                </div>
+                <div id="validationServerTitleFeedback" class="invalid-feedback">
+                    Please provide a valid title.
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="image" class="form-label">Add images...</label>
+                <input class="form-control" type="file" id="image" name="image" multiple>
+
+                <div class="invalid-feedback">
+                    This location would look much better with a picture.
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="price">Price per person:</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="inputGroupPrepend">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00"
+                    name = "location[price]"  aria-label="price" aria-describedby="inputGroupPrepend validationServerPriceFeedback" required>
+                    <span class="input-group-text">.00</span>
+                    <div class="valid-feedback">
+                        Looks good! &#128076;
+                    </div>
+                    <div id="validationServerPriceFeedback" class="invalid-feedback">
+                        Please provide a valid price.
+                    </div>
+                </div> 
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name = "location[description]" required aria-describedby="validationServerDescriptionFeedback"> </textarea>
+                <div class="valid-feedback">
+                    Looks good! &#128076;
+                </div>
+                <div id="validationServerDescriptionFeedback" class="invalid-feedback">
+                    Please provide a valid description.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name = "location[location]" required aria-describedby="validationServerLocationFeedback">
+                <div class="valid-feedback">
+                    Looks good! &#128076;
+                </div>
+                <div id="validationServerLocationFeedback" class="invalid-feedback">
+                    Please provide a valid address.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-success"type="submit">Add location</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
