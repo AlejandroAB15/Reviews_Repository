@@ -1,11 +1,16 @@
+if(process.env.NODE_ENV !== "production"){
+  require("dotenv").config();
+}
+
 const mongoose = require("mongoose");
 const Location = require("../models/location");
 const locations = require("./locations");
 const axios = require("axios");
+const dbURL = process.env.DB_URL;
 
 /* ----------------Conexion a la base de datos---------------------*/
 
-mongoose.connect("mongodb://localhost:27017/irrealReviews");
+mongoose.connect(dbURL);
 
 const db = mongoose.connection;
 

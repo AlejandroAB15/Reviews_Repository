@@ -17,7 +17,6 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
 const mongoSanitize = require("express-mongo-sanitize");
-const helmet = require("helmet");
 const dbURL = process.env.DB_URL;
 const secret = process.env.SECRET;
 const MongoStore = require("connect-mongo");
@@ -47,7 +46,6 @@ APP.use(express.urlencoded({extended: true}));
 APP.use(methodOverride('_method'));
 APP.engine('ejs', ejsMate);
 APP.use(express.static(path.join(__dirname, "public")));
-APP.use(helmet({ contentSecurityPolicy: false }));
 
 const store = MongoStore.create({
     mongoUrl: dbURL,

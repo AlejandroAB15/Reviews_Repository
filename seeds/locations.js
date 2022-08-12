@@ -9,7 +9,7 @@ module.exports = [
     price: "500",
     description: "Un lugar muy bonito para perderte como individuo",
     location: "Turín 52, Juárez, Cuauhtémoc",
-    author: "62f0a0ef50ef79acdde99f43"
+    author: "62f5dcee0c00bd3b8f615b5a"
   },
   {
     title: "Xaman Bar",
@@ -21,7 +21,7 @@ module.exports = [
     price: "300",
     description: "Pa campechanearsela con los compas",
     location: "Copenhague 6, Juárez, Cuauhtémoc",
-    author: "62f0a0ef50ef79acdde99f43"
+    author: "62f5dcee0c00bd3b8f615b5a"
   },
   {
     title: "El canton del doble Ei",
@@ -33,6 +33,6 @@ module.exports = [
     price: "100",
     description: "Maravilloso lugar para ingresar al estado etilico",
     location: "Calle Pedro Guzmán 17, Lomas de San Lorenzo",
-    author: "62f0a0ef50ef79acdde99f43"
+    author: "62f5dcee0c00bd3b8f615b5a"
   },
 ];
